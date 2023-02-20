@@ -12,3 +12,21 @@ export type TweetBody = {
   profileImg: string;
   image: string | undefined;
 };
+
+export interface Comment extends CommentBody {
+  _id: string;
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  _type: "comment";
+  tweet: {
+    _ref: string;
+    _type: "reference";
+  };
+}
+export type CommentBody = {
+  comment: string;
+  username: string;
+  profileImg: string;
+  tweetId: string | undefined;
+};
