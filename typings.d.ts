@@ -6,9 +6,9 @@ export interface Tweet extends TweetBody {
   _type: "tweet";
   blockTweet: boolean;
 }
-export const TweetBody = {
-  text: string,
-  username: string,
-  profileImg: string,
-  image: string | undefined,
+export type TweetBody = {
+  text: string;
+  username: string;
+  profileImg: string;
+  image: string | undefined;
 };
